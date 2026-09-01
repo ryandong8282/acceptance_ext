@@ -1,0 +1,13 @@
+{
+  "schema_version": "acceptance-ext-task-v1",
+  "language": "zh-CN",
+  "tree": ["分项", "检验批", "验收项目"],
+  "required_grounding": ["source_clause", "source_quote", "evidence"],
+  "item_categories": ["主控项目", "一般项目", "未分类"],
+  "sampling_policy": {
+    "explicit_only": true,
+    "never_replace_explicit_quantity_with_fallback": true,
+    "recognized_units": ["处", "件", "个", "点", "组", "根", "套", "批", "间", "樘", "块", "次"]
+  },
+  "ontology": "GB 50300"
+}
