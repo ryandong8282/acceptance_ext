@@ -1,0 +1,30 @@
+[
+  {
+    "name": "主体结构",
+    "node_type": "单位",
+    "children": [
+      {
+        "name": "混凝土结构",
+        "node_type": "子分部",
+        "children": [
+          {"name": "模板", "node_type": "分项", "children": []},
+          {"name": "钢筋", "node_type": "分项", "children": []},
+          {"name": "混凝土", "node_type": "分项", "children": []},
+          {"name": "预应力", "node_type": "分项", "children": []},
+          {"name": "现浇结构", "node_type": "分项", "children": []},
+          {"name": "装配式结构", "node_type": "分项", "children": []}
+        ]
+      },
+      {
+        "name": "木结构",
+        "node_type": "子分部",
+        "children": [
+          {"name": "方木与原木结构", "node_type": "分项", "children": []},
+          {"name": "胶合木结构", "node_type": "分项", "children": []},
+          {"name": "轻型木结构", "node_type": "分项", "children": []},
+          {"name": "木结构的防护", "node_type": "分项", "children": []}
+        ]
+      }
+    ]
+  }
+]
