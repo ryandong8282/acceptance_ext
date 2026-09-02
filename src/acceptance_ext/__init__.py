@@ -3,4 +3,4 @@
 from .pipeline import ExtractionPipeline
 
 __all__ = ["ExtractionPipeline"]
-__version__ = "0.1.0"
+__version__ = "0.2.0"
