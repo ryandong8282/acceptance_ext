@@ -145,11 +145,7 @@ def create_app(*, workspace: Path | None = None):
                     yield f"id: {event['seq']}\ndata: {json.dumps(event, ensure_ascii=False)}\n\n"
                 job = manager.get_job(job_id)
                 if job["status"] in TERMINAL_STATUSES and next_cursor >= int(job.get("event_count", 0)):
-                    terminal = {
-                        "job_id": job_id,
-                        "status": job["status"],
-                        "event_count": job["event_count"],
-                    }
+                    terminal = {"job_id": job_id, "status": job["status"], "event_count": job["event_count"]}
                     yield f"event: terminal\ndata: {json.dumps(terminal, ensure_ascii=False)}\n\n"
                     break
                 if not page["events"]:
@@ -227,9 +223,16 @@ def create_app(*, workspace: Path | None = None):
             raise public_error(exc, status_code=409) from exc
         return {"ok": True}
 
-    @app.get("/app.js", include_in_schema=False)
-    def app_js() -> FileResponse:
-        return FileResponse(web_root / "app.js", media_type="text/javascript; charset=utf-8")
+    @app.get("/app-core.js", include_in_schema=False)
+    @app.get("/app-workspace-layout.js", include_in_schema=False)
+    @app.get("/app-workspace-tree.js", include_in_schema=False)
+    @app.get("/app-workspace-detail.js", include_in_schema=False)
+    @app.get("/app-console.js", include_in_schema=False)
+    @app.get("/app-run-view.js", include_in_schema=False)
+    @app.get("/app-run-events.js", include_in_schema=False)
+    def app_script(request: Request) -> FileResponse:
+        filename = Path(request.url.path).name
+        return FileResponse(web_root / filename, media_type="text/javascript; charset=utf-8")
 
     @app.get("/styles.css", include_in_schema=False)
     def styles_css() -> FileResponse:
