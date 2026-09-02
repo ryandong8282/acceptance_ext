@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light" />
+  <title>Acceptance Ext · 规范抽取工作台</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app-shell">
+    <header class="topbar">
+      <button class="brand" id="brand-home" type="button" aria-label="返回抽取工作台">
+        <span class="brand-mark">AX</span>
+        <span class="brand-copy">
+          <strong>Acceptance Ext</strong>
+          <small>规范结构化实验台</small>
+        </span>
+      </button>
+      <nav class="topnav" aria-label="主导航">
+        <button class="nav-button" data-route="/editor" type="button">
+          <span class="nav-icon">⌘</span>抽取工作台
+        </button>
+        <button class="nav-button" data-route="/jobs" type="button">
+          <span class="nav-icon">◫</span>运行控制台
+          <span class="nav-count" id="active-count" hidden>0</span>
+        </button>
+      </nav>
+      <div class="topbar-meta">
+        <span class="health-dot" id="health-dot"></span>
+        <span id="health-copy">连接中</span>
+        <a class="ghost-link" href="/api/docs" target="_blank" rel="noreferrer">API</a>
+      </div>
+    </header>
+    <main id="screen" class="screen" aria-live="polite"></main>
+  </div>
+  <div id="toast-stack" class="toast-stack" aria-live="assertive"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
