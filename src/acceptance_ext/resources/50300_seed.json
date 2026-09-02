@@ -1,28 +1,40 @@
 [
   {
+    "id": 2,
+    "pid": 0,
     "name": "主体结构",
+    "type": 3,
+    "type_name": "分部",
     "node_type": "单位",
     "children": [
       {
+        "id": 18,
+        "pid": 2,
         "name": "混凝土结构",
+        "type": 2,
+        "type_name": "子分部",
         "node_type": "子分部",
         "children": [
-          {"name": "模板", "node_type": "分项", "children": []},
-          {"name": "钢筋", "node_type": "分项", "children": []},
-          {"name": "混凝土", "node_type": "分项", "children": []},
-          {"name": "预应力", "node_type": "分项", "children": []},
-          {"name": "现浇结构", "node_type": "分项", "children": []},
-          {"name": "装配式结构", "node_type": "分项", "children": []}
+          {"id": 161, "pid": 18, "name": "模板", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 162, "pid": 18, "name": "钢筋", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 163, "pid": 18, "name": "混凝土", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 164, "pid": 18, "name": "预应力", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 165, "pid": 18, "name": "现浇结构", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 166, "pid": 18, "name": "装配式结构", "type": 1, "type_name": "分项", "node_type": "分项", "children": []}
         ]
       },
       {
+        "id": 24,
+        "pid": 2,
         "name": "木结构",
+        "type": 2,
+        "type_name": "子分部",
         "node_type": "子分部",
         "children": [
-          {"name": "方木与原木结构", "node_type": "分项", "children": []},
-          {"name": "胶合木结构", "node_type": "分项", "children": []},
-          {"name": "轻型木结构", "node_type": "分项", "children": []},
-          {"name": "木结构的防护", "node_type": "分项", "children": []}
+          {"id": 206, "pid": 24, "name": "方木与原木结构", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 207, "pid": 24, "name": "胶合木结构", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 208, "pid": 24, "name": "轻型木结构", "type": 1, "type_name": "分项", "node_type": "分项", "children": []},
+          {"id": 209, "pid": 24, "name": "木结构的防护", "type": 1, "type_name": "分项", "node_type": "分项", "children": []}
         ]
       }
     ]
