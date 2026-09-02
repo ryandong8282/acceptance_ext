@@ -4,9 +4,12 @@ __pycache__/
 .ruff_cache/
 .venv/
 venv/
-.env
-output/
-reports/generated/
-*.egg-info/
 dist/
 build/
+*.egg-info/
+output/
+reports/generated/
+.acceptance_ext/
+runtime/
+.DS_Store
+.env
